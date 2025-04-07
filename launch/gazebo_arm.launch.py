@@ -34,7 +34,7 @@ def generate_launch_description():
     )
     use_sim_time = LaunchConfiguration("use_sim_time", default="true")
 
-    robot_type = "ur5"  # ROBOT_MODEL  #LaunchConfiguration("robot")
+    robot_type = "ur3"  # ROBOT_MODEL  #LaunchConfiguration("robot")
     
     world = LaunchConfiguration("world")
     declare_world_path = DeclareLaunchArgument(
