@@ -87,7 +87,7 @@ def generate_launch_description():
     robots = [
             {'name': 'arm1', 'x_pose': '-1.5', 'y_pose': '1.50', 'Y':'0.0'},
             {'name': 'arm2', 'x_pose': '1.5', 'y_pose': '1.5', 'Y':'-3.14'},
-            {'name': 'arm3', 'x_pose': '0', 'y_pose': '-1.5', 'Y':'-1.57'},
+            {'name': 'arm3', 'x_pose': '0', 'y_pose': '-1.5', 'Y':'1.57'},
             
             # …
             # …
