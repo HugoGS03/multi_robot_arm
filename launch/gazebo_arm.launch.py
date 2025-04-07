@@ -101,7 +101,7 @@ def generate_launch_description():
     for robot in robots:    
         robot_final_action = spawn_robot(
             ld,
-            "ur3",
+            "ur5",
             robot["name"] ,
             use_sim_time,
             robot["x_pose"],
