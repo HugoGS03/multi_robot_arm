@@ -124,7 +124,7 @@ def spawn_robot(
     param_substitutions = {"use_sim_time": use_sim_time}
     configured_params = RewrittenYaml(
         source_file=package_path
-        + "/config/ur/" + "ur5" + "/ros_controllers_robot.yaml",
+        + "/config/ur/" + robot_type + "/ros_controllers_robot.yaml",
         root_key=robot_name,
         param_rewrites=param_substitutions,
         convert_types=True,
@@ -167,11 +167,11 @@ def spawn_robot(
     robot_description = {"robot_description": robot_urdf}
 
     kinematics_yaml = load_yaml(
-        package_path, "config/ur/" + "ur5" + "/kinematics.yaml"
+        package_path, "config/ur/" + robot_type + "/kinematics.yaml"
     )
 
     robot_description_semantic_config = load_file(
-        package_path, "config/ur/" + "ur5" + "/robot.srdf"
+        package_path, "config/ur/" + robot_type + "/robot.srdf"
     )
     robot_description_semantic = {
         "robot_description_semantic": robot_description_semantic_config
@@ -187,13 +187,13 @@ def spawn_robot(
     }
 
     ompl_planning_yaml = load_yaml(
-        package_path, "config/ur/" + "ur5" + "/ompl_planning.yaml"
+        package_path, "config/ur/" + robot_type + "/ompl_planning.yaml"
     )
 
     ompl_planning_pipeline_config["ompl"].update(ompl_planning_yaml)
 
     joint_limits_yaml = load_yaml(
-        package_path, "config/ur/" + "ur5" + "/joint_limits_planning.yaml"
+        package_path, "config/ur/" + robot_type + "/joint_limits_planning.yaml"
     )
 
     joint_limits = {"robot_description_planning": joint_limits_yaml}
@@ -201,7 +201,7 @@ def spawn_robot(
     # Trajectory Execution Functionality
     moveit_simple_controllers_yaml = load_yaml(
         package_path,
-        "config/ur/" + "ur5" + "/moveit_controller_manager.yaml"
+        "config/ur/" + robot_type + "/moveit_controller_manager.yaml"
     )
 
     moveit_controllers = {
