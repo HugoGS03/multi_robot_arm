@@ -25,6 +25,7 @@
         </xacro:if>
         <xacro:if value="${sim_ignition}">
           <plugin>ign_ros2_control/IgnitionSystem</plugin>
+          <param name="IgnitionSystem" type="system">
         </xacro:if>
         <xacro:if value="${use_fake_hardware}">
           <plugin>fake_components/GenericSystem</plugin>

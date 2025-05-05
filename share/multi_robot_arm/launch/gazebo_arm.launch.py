@@ -1,0 +1,1 @@
+/home/alumno/tfg/detercoords/last-ros2/src/multi_robot_arm/launch/gazebo_arm.launch.py
